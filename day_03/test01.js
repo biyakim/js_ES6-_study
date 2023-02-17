@@ -22,7 +22,7 @@ const map = (f, iter) => {
 // }
 // console.log(names);
 
-console.log("map(p => p.name, products)",map(p => p.name, products));
+console.log("map(p => p.name, products) : ",map(p => p.name, products));
 
 // let prices = [];
 // for(const p of products) {
@@ -30,4 +30,4 @@ console.log("map(p => p.name, products)",map(p => p.name, products));
 // }
 // console.log(prices);
 
-console.log("map(p => p.price, products)",map(p => p.price, products));
+console.log("map(p => p.price, products) : ",map(p => p.price, products));
