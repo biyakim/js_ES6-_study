@@ -52,8 +52,57 @@ function _filter(users, predi) {
     return new_list;
 }
 
-console.log(
-    _filter(users, function(user){ return user.age >= 30; }));
+function _map(list, mapper) {
+    var new_list = [];
+    for(var i = 0; i<list.length; i++){
+        new_list.push(list[i]);
+}
+    return new_list;
+}
+
+var over_30 = _filter(users, function(user){ return user.age >= 30; });
+console.log(over_30);
+
+var names = _map(over_30, function(user) {
+    return user.name;
+});
+console.log(names);
+
+var under_30 = _filter(users, function(user) { return user.age < 30; });
+console.log(under_30);
+
+
+var ages = _map(under_30, function(user) {
+    return user.age;
+})
+console.log(ages);
+
+
 
 console.log(
-    _filter(users, function(user){ return user.age < 30; }));
+    _map(
+        _filter(users, function(user){ return user.age >= 30; }),
+        function(user) { return user.name; })
+)
+
+console.log(
+    _map(
+        _filter(users, function(user){ return user.age < 30; }),
+        function(user) { return user.age; })
+)
+
+//console.log(_map([1,2,3], function(num) { return num * 2;}));
+
+// console.log(
+//     _filter(users, function(user){ return user.age >= 30; }));
+
+
+
+// console.log(
+//     _filter(users, function(user){ return user.age < 30; }));
+
+// console.log(
+//     _filter([1,2,3,4], function(num) { return num % 2}));
+// console.log(
+//     _filter([1,2,3,4], function(num) { return !(num % 2);})
+// );
