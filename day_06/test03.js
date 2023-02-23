@@ -42,15 +42,15 @@ var _get = _curryr(function _get(obj, key) {
 });
 
 
-console.log(
-    _map(
-        _filter(users, function(user){ return user.age >= 30; }),
-        _get('name')));
+// console.log(
+//     _map(
+//         _filter(users, function(user){ return user.age >= 30; }),
+//         _get('name')));
 
-console.log(
-    _map(
-        _filter(users, function(user){ return user.age < 30; }),
-        _get('age')));
+// console.log(
+//     _map(
+//         _filter(users, function(user){ return user.age < 30; }),
+//         _get('age')));
         // function(user) { return user.age; }));
 
 // var user1 = users[0];
